@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+:root {
+  /*## Colors*/
+  /*### Primary*/
+  --Blue: hsl(223, 87%, 63%);
+  /*### Secondary*/
+  --Pale-Blue: hsl(223, 100%, 88%);
+  --Light-Red: hsl(354, 100%, 66%);
+  /*### Neutral*/
+  --Gray: hsl(0, 0%, 59%);
+  --Very-Dark-Blue: hsl(209, 33%, 12%);
+}
+/*------GENERAL--------*/
+body,
+figure {
+  margin: 0;
+}
+
+body {
+  /*size*/
+  max-width: 375px;
+  /*space*/
+  margin-left: 25px;
+  margin-right: 25px;
+  /*text*/
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 12px;
+  text-align: center;
+}
+
+/*------HEADER--------*/
+.header-container {
+  /*space*/
+  margin-top: 85px;
+  margin-bottom: 33px;
+}
+
+#logo {
+  /*image*/
+  background-image: url(../images/logo.svg);
+  background-repeat: no-repeat;
+  /*space*/
+  margin: 0;
+  margin: auto;
+  padding-bottom: 40px;
+  /*size*/
+  width: 86px;
+  height: 26px;
+}
+.header-title {
+  /*space*/
+  margin-bottom: 25px;
+  /*text*/
+  font-size: 30px;
+  font-weight: 300;
+  color: var(--Gray);
+}
+#header-bold-text {
+  /*text*/
+  font-weight: 700;
+  color: black;
+}
+.header-text {
+  /*text*/
+  font-size: 16px;
+  /*space*/
+  margin-bottom: 0;
+}
+
+/*------FORM--------*/
+.form-sign-up {
+  /*space*/
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.form-input {
+  display: block;
+  border: 2px solid var(--Pale-Blue);
+  border-radius: 45px;
+  box-sizing: border-box;
+  /*size*/
+  height: 40px;
+  width: 100%;
+  /*space*/
+  margin-bottom: 10px;
+  padding-left: 30px;
+  /*text*/
+  font-size: 14px;
+}
+.form-input::placeholder {
+  opacity: 0.5;
+  /*text*/
+  color: var(--Very-Dark-Blue);
+}
+.form-input:focus {
+  outline: none;
+  /*space*/
+  padding-left: 30px;
+}
+
+.error {
+  border: 2px solid var(--Light-Red);
+}
+.error-warper {
+  display: block;
+  /*space*/
+  padding-bottom: 10px;
+}
+#errorMessage {
+  /*text*/
+  color: var(--Light-Red);
+  font-style: italic;
+}
+
+.form-btn {
+  display: block;
+  background-color: var(--Blue);
+  cursor: pointer;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 5px 10px var(--Pale-Blue);
+  /*size*/
+  height: 40px;
+  width: 100%;
+  /*text*/
+  font-size: 14px;
+  color: white;
+  text-align: center;
+}
+
+.form-btn:hover {
+  opacity: 0.8;
+}
+.form-btn:focus {
+  outline: none;
+}
+
+/*------ILLUSTRATION--------*/
+#dashboard-pic {
+  /*image*/
+  background-image: url(../images/illustration-dashboard.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  /*size*/
+  max-width: 375px;
+  height: 227px;
+  box-sizing: border-box;
+  /*space*/
+  margin-top: 72px;
+  margin-bottom: 120px;
+}
+
+/*------SOCIAL MEDIA--------*/
+.nav-social-media {
+  /*flex*/
+  display: flex;
+  justify-content: center;
+  /*space*/
+  margin-bottom: 27px;
+}
+.icon-frame {
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid var(--Pale-Blue);
+  /*size*/
+  height: 30px;
+  width: 30px;
+  box-sizing: border-box;
+  /*space*/
+  margin: auto;
+  margin-right: 12px;
+  /*text*/
+  color: var(--Blue);
+  font-size: 14px;
+}
+.icon-frame:hover {
+  background-color: var(--Blue);
+  border: 2px solid var(--Blue);
+  /*size*/
+  box-sizing: border-box;
+  /*text*/
+  color: white;
+}
+.fab {
+  margin-top: 25%;
+}
+
+/*------FOOTER--------*/
+.copyright {
+  color: var(--Gray);
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/*##########    DESKTOP  && TABLET   ###########*/
+@media only screen and (min-width: 540px) {
+  /*------GENERAL--------*/
+  body {
+    /*size*/
+    max-width: 1440px;
+    /*space*/
+    margin: auto;
+  }
+
+  /*------HEADER--------*/
+  #logo {
+    padding-bottom: 10px;
+  }
+  .header-title {
+    /*space*/
+    margin-bottom: 15px;
+    /*text*/
+    font-size: 45px;
+  }
+  .header-text {
+    /*text*/
+    margin-top: 0;
+    font-size: 20px;
+  }
+  /*------FORM--------*/
+  .form-sign-up {
+    /*size*/
+    max-width: 640px;
+    /*space*/
+    margin: 0;
+    margin: auto;
+    /*flex*/
+    display: flex;
+    flex-direction: row;
+  }
+  .error-warper {
+    /*flex*/
+    flex: 5 1 auto;
+    /*text*/
+    text-align: left;
+  }
+  #errorMessage {
+    padding-left: 30px;
+  }
+  .error-warper {
+    /*size*/
+    width: 66%;
+    /*space*/
+    padding-bottom: 0;
+    padding-right: 16px;
+  }
+  .form-btn {
+    width: 33%;
+  }
+
+  /*------ILLUSTRATION--------*/
+  #dashboard-pic {
+    /*size*/
+    max-width: 640px;
+    height: 395px;
+    /*space*/
+    margin: auto;
+    margin-top: 74px;
+    margin-bottom: 70px;
+  }
+}
